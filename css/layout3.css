@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  /* Coluna 1 (NAV) com 20% e Coluna 2 (Resto) ocupando o restante */
+  grid-template-columns: 200px 1fr;
+  /* Distribuição vertical do lado direito: Header, Main e Footer */
+  grid-template-rows: 100px 1fr 80px;
+  grid-template-areas:
+    "nav header"
+    "nav main"
+    "nav footer";
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Centralização do texto nas áreas */
+.nav, .header, .main, .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Atribuição de áreas e cores idênticas à imagem */
+.nav {
+  grid-area: nav;
+  background-color: #d1b8dc; /* Lilás */
+}
+
+.header {
+  grid-area: header;
+  background-color: #ff6043; /* Laranja/Coral */
+}
+
+.main {
+  grid-area: main;
+  background-color: #20b2aa; /* Verde Água / Ciano */
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #8a2be2; /* Roxo */
+}

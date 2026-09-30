@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  /* 3 colunas: NAV (lateral esquerda), ARTICLE (centro), ASIDE (lateral direita) */
+  grid-template-columns: 200px 1fr 200px;
+  /* 3 linhas: HEADER, CONTEÚDO PRINCIPAL (flexível) e FOOTER */
+  grid-template-rows: 120px 1fr 100px;
+  grid-template-areas:
+    "nav header  header"
+    "nav article aside"
+    "nav footer  footer";
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Centralização do texto em cada bloco */
+.nav, .header, .article, .aside, .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Áreas e Cores idênticas às da imagem */
+.nav {
+  grid-area: nav;
+  background-color: #d1b8dc; /* Lilás */
+}
+
+.header {
+  grid-area: header;
+  background-color: #ff6043; /* Laranja/Coral */
+}
+
+.article {
+  grid-area: article;
+  background-color: #98fb98; /* Verde Claro */
+}
+
+.aside {
+  grid-area: aside;
+  background-color: #f5e1b4; /* Bege / Amarelo Claro */
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #8a2be2; /* Roxo */
+}

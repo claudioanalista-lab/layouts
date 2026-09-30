@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 20px;
+}
+
+.title {
+  font-family: system-ui, sans-serif;
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+/* Estrutura principal utilizando Grid */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 1fr;
+  grid-template-rows: 100px 320px 100px;
+  grid-template-areas:
+    "header  header  header"
+    "nav     article aside"
+    "footer  footer  footer";
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Alinhamento e centralização do texto dos blocos */
+header, nav, article, aside, footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #111111;
+  letter-spacing: 1px;
+}
+
+/* Cores e mapeamento de áreas */
+header {
+  grid-area: header;
+  background-color: #ff5733;
+}
+
+nav {
+  grid-area: nav;
+  background-color: #d1c0d7;
+}
+
+article {
+  grid-area: article;
+  background-color: #92ee95;
+}
+
+aside {
+  grid-area: aside;
+  background-color: #f2e2ba;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #7b23e0;
+}

@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+/* Container flex vertical dividindo a tela em 5 linhas iguais */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Regra base para cada linha */
+.row {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  gap: 10px; /* Espaço entre círculos colados */
+}
+
+/* Regra base para os círculos */
+.circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+/* --- LINHA 1 --- */
+.row-1 {
+  background-color: #eeeaf6;
+  justify-content: flex-end; /* Empurra os itens para a direita */
+}
+.circle-purple {
+  background-color: #a49ed1;
+}
+
+/* --- LINHA 2 --- */
+.row-2 {
+  background-color: #dcf2cd;
+  justify-content: flex-end; /* Empurra os itens para a direita */
+}
+.circle-green {
+  background-color: #72a654;
+}
+
+/* --- LINHA 3 --- */
+.row-3 {
+  background-color: #fae4e4;
+  justify-content: center; /* Centraliza os itens */
+}
+.circle-red {
+  background-color: #c86f73;
+}
+
+/* --- LINHA 4 --- */
+.row-4 {
+  background-color: #f7f5d7;
+  justify-content: space-between; /* Distribui encostando nas bordas */
+  padding: 0; /* Remove padding para encostar totalmente se desejado */
+}
+.circle-yellow {
+  background-color: #d1d81b;
+}
+
+/* --- LINHA 5 --- */
+.row-5 {
+  background-color: #d6e8fd;
+  justify-content: space-around; /* Distribui com espaço igual ao redor */
+}
+.circle-blue {
+  background-color: #4a7bb7;
+}

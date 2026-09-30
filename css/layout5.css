@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+}
+
+/* Estrutura Principal do Grid */
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 200px 1fr 180px;
+  grid-template-rows: 110px 1fr 110px;
+  grid-template-areas:
+    "nav header  header"
+    "nav main    aside"
+    "nav footer  footer";
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Estilização da NAV (Coluna Esquerda) */
+.nav {
+  grid-area: nav;
+  background-color: #d1b8dc; /* Lilás */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.link-btn {
+  background-color: #ff6043;
+  color: #000;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 10px 0;
+  width: 80px;
+  text-align: center;
+}
+
+/* Estilização do HEADER */
+.header {
+  grid-area: header;
+  background-color: #ff6043; /* Laranja/Coral */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilização da MAIN (Área Verde com Cartões) */
+.main {
+  grid-area: main;
+  background-color: #98fb98; /* Verde Claro */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+}
+
+.main-card-top {
+  background-color: #aed8ea; /* Azul Claro */
+  width: 65%;
+  height: 45%;
+}
+
+.main-cards-bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  height: 35%;
+}
+
+.card-pink {
+  background-color: #ffb6c1; /* Rosa Claro */
+  width: 42%;
+  height: 100%;
+}
+
+/* Estilização do ASIDE (Coluna Direita) */
+.aside {
+  grid-area: aside;
+  background-color: #f5e1b4; /* Bege / Amarelo Claro */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.item-cyan {
+  background-color: #00ffff; /* Ciano */
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
+/* Estilização do FOOTER */
+.footer {
+  grid-area: footer;
+  background-color: #8a2be2; /* Roxo */
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
